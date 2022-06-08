@@ -265,7 +265,8 @@ body span {
   margin-top: 25px;
 }
 
-.portfolio .home .home_info .home_btn a {
+.portfolio .home .home_info .home_btn div {
+  cursor: pointer;
   text-decoration: none;
   padding: 10px 10px;
   background-color: #ff651c;
@@ -280,7 +281,7 @@ body span {
   transition: all 0.3s;
 }
 
-.portfolio .home .home_info .home_btn a:hover {
+.portfolio .home .home_info .home_btn div:hover {
   background-color: transparent;
 }
 
@@ -345,6 +346,10 @@ body span {
   color: #888;
   padding-bottom: 20px;
   font-size: 16px;
+}
+
+.portfolio .about .about_container .about_containerRight .about_info .about_infoList ul li a {
+  color: #ff651c;
 }
 
 .portfolio .about .about_container .about_containerRight .about_info .about_infoList ul li p {

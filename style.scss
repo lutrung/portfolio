@@ -235,7 +235,8 @@ body {
                 justify-content: center;
                 margin-top: 25px;
 
-                a {
+                div {
+                    cursor: pointer;
                     text-decoration: none;
                     padding: 10px 10px;
                     background-color: #ff651c;
@@ -315,6 +316,10 @@ body {
                                 color: #888;
                                 padding-bottom: 20px;
                                 font-size: 16px;
+
+                                a {
+                                    color: #ff651c;
+                                }
 
                                 p {
                                     color: #fff;

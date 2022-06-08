@@ -1,16 +1,5 @@
-// (showOff = () => {
-//     let main_item = document.querySelectorAll('.portfolio_item')
-//     main_item.forEach(item => {
-//         if (item.classList.contains('active')) {
-//             item.style.display = "flex"
-//         } else {
-//             item.style.display = "none"
-//         }
-//     })
 
-// })();
-
-(sidebar = () => {
+let sidebar = () => {
     let menu = document.querySelectorAll('.menu_item')
     let main_item = document.querySelectorAll('.portfolio_item')
 
@@ -33,4 +22,15 @@
         })
     })
 
+}
+let toAbout = () => {
+    let menu = document.querySelectorAll('.menu_item')
+    let about = document.getElementById('aboutMe')
+    about.addEventListener("click", () => {
+        menu[1].click()
+    })
+}
+(start = () => {
+    sidebar()
+    toAbout()
 })()
