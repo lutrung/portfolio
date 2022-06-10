@@ -21,10 +21,39 @@ body {
 }
 
 %Nameline {
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    margin: 10px auto;
+    position: relative;
+    z-index: 999;
+    right: 0;
     width: 100px;
+    border-radius: 4px;
     background-color: #ff651c;
-    border: #ff651c;
-    height: 2px;
+
+    &::before {
+        background-color: #212121;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 4px;
+        left: 8px;
+        animation: lineMove 10s infinite linear
+    }
+
+    &::after {
+        background-color: #212121;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 4px;
+        left: 0;
+        animation: lineMove 10s infinite linear;
+    }
 }
 
 %title {
@@ -264,8 +293,6 @@ body {
 
         .about_title {
             @extend %title;
-
-
         }
 
         .about_infoNameLine {
@@ -357,6 +384,144 @@ body {
             }
         }
     }
+
+    .project {
+        @extend %main;
+        flex-direction: column;
+        align-items: center;
+
+        .project_title {
+            @extend %title;
+        }
+
+        .project_infoNameLine {
+            @extend %Nameline
+        }
+
+        .nav {
+            margin: 10px 0 30px;
+            border: none;
+
+            .nav-item {
+
+                .nav-link {
+                    align-items: center;
+                    border: 2px solid #ff651c;
+                    padding: 0;
+                    border-radius: 5px;
+                    background-color: #ff651c;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    font-size: 14px;
+                    color: #fff;
+                    padding: 10px;
+                    margin: 0px 10px;
+                    font-weight: 700;
+
+                    &.active {
+                        background-color: transparent;
+                        box-shadow: 0 0 25px #000000d9;
+                        transform: rotate(10deg);
+                    }
+                }
+            }
+        }
+
+        .tab-content {}
+    }
+
+    ;
+
+
+    .contact {
+        @extend %main;
+        flex-direction: column;
+        align-items: center;
+
+        .contact_title {
+            @extend %title;
+        }
+
+        ;
+
+        .contact_infoNameLine {
+            @extend %Nameline
+        }
+
+        .contact_container {
+            width: 100%;
+
+            h4 {
+                color: #fff;
+                font-weight: 700;
+                margin: 0 0 15px;
+            }
+
+            .contact_form {
+
+                input,
+                textarea {
+                    background-color: #212121;
+                    border: none;
+                    color: #fff;
+                    padding: 9px 14px;
+                    box-shadow: 0 0 10px #000000d9;
+                    border-radius: 5px;
+                }
+
+                .btnSendMe {
+                    align-items: center;
+                    border: 2px solid #ff651c;
+                    border-radius: 5px;
+                    background-color: #ff651c;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    font-size: 14px;
+                    color: #fff;
+                    padding: 10px;
+                    margin: 25px auto;
+
+                    &:hover {
+                        background-color: transparent;
+                        box-shadow: 0 0 25px #000000d9;
+                        transform: rotate(10deg);
+                    }
+                }
+            }
+
+            .contact_info {
+                .info_list {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        margin: 10px 0 20px;
+
+                        i {
+                            color: #ff651c;
+                            font-size: 30px;
+                            min-width: 30px;
+                        }
+
+                        .info_item {
+                            display: flex;
+                            flex-direction: column;
+                            color: #fff;
+                            font-size: 14px;
+                            padding-left: 30px;
+                            font-weight: 600;
+
+                            a {
+                                color: #ff651c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes textMove {
@@ -372,5 +537,19 @@ body {
 
     100% {
         margin-top: 0;
+    }
+}
+
+@keyframes lineMove {
+    0% {
+        transform: translateX(-1px)
+    }
+
+    50% {
+        transform: translateX(89px)
+    }
+
+    100% {
+        transform: translateX(-1px)
     }
 }

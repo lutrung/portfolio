@@ -21,14 +21,45 @@ body span {
   color: #ff651c;
 }
 
-.portfolio .home .home_info .home_infoNameLine, .portfolio .about .about_infoNameLine {
+.portfolio .home .home_info .home_infoNameLine, .portfolio .about .about_infoNameLine, .portfolio .project .project_infoNameLine, .portfolio .contact .contact_infoNameLine {
+  content: '';
+  display: block;
+  height: 3px;
+  left: 0;
+  margin: 10px auto;
+  position: relative;
+  z-index: 999;
+  right: 0;
   width: 100px;
+  border-radius: 4px;
   background-color: #ff651c;
-  border: #ff651c;
-  height: 2px;
 }
 
-.portfolio .home .home_info .home_infoName, .portfolio .about .about_title {
+.portfolio .home .home_info .home_infoNameLine::before, .portfolio .about .about_infoNameLine::before, .portfolio .project .project_infoNameLine::before, .portfolio .contact .contact_infoNameLine::before {
+  background-color: #212121;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 8px;
+  -webkit-animation: lineMove 10s infinite linear;
+          animation: lineMove 10s infinite linear;
+}
+
+.portfolio .home .home_info .home_infoNameLine::after, .portfolio .about .about_infoNameLine::after, .portfolio .project .project_infoNameLine::after, .portfolio .contact .contact_infoNameLine::after {
+  background-color: #212121;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 0;
+  -webkit-animation: lineMove 10s infinite linear;
+          animation: lineMove 10s infinite linear;
+}
+
+.portfolio .home .home_info .home_infoName, .portfolio .about .about_title, .portfolio .project .project_title, .portfolio .contact .contact_title {
   font-size: 55px;
   line-height: 1.2;
   font-weight: 700;
@@ -37,7 +68,7 @@ body span {
   margin: 10px 0 0;
 }
 
-.portfolio .home, .portfolio .about {
+.portfolio .home, .portfolio .about, .portfolio .project, .portfolio .contact {
   position: relative;
   padding: 30px;
   background-color: #212121;
@@ -49,23 +80,23 @@ body span {
   display: none;
 }
 
-.portfolio .active.home, .portfolio .active.about {
+.portfolio .active.home, .portfolio .active.about, .portfolio .active.project, .portfolio .active.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.portfolio .home::-webkit-scrollbar-track, .portfolio .about::-webkit-scrollbar-track {
+.portfolio .home::-webkit-scrollbar-track, .portfolio .about::-webkit-scrollbar-track, .portfolio .project::-webkit-scrollbar-track, .portfolio .contact::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-.portfolio .home::-webkit-scrollbar, .portfolio .about::-webkit-scrollbar {
+.portfolio .home::-webkit-scrollbar, .portfolio .about::-webkit-scrollbar, .portfolio .project::-webkit-scrollbar, .portfolio .contact::-webkit-scrollbar {
   width: 5px;
   background-color: transparent;
 }
 
-.portfolio .home::-webkit-scrollbar-thumb, .portfolio .about::-webkit-scrollbar-thumb {
+.portfolio .home::-webkit-scrollbar-thumb, .portfolio .about::-webkit-scrollbar-thumb, .portfolio .project::-webkit-scrollbar-thumb, .portfolio .contact::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #555;
 }
@@ -386,6 +417,141 @@ body span {
           transform: rotate(10deg);
 }
 
+.portfolio .project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .project .nav {
+  margin: 10px 0 30px;
+  border: none;
+}
+
+.portfolio .project .nav .nav-item .nav-link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ff651c;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #ff651c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  margin: 0px 10px;
+  font-weight: 700;
+}
+
+.portfolio .project .nav .nav-item .nav-link.active {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 25px #000000d9;
+          box-shadow: 0 0 25px #000000d9;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.portfolio .contact {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .contact .contact_container {
+  width: 100%;
+}
+
+.portfolio .contact .contact_container h4 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.portfolio .contact .contact_container .contact_form input,
+.portfolio .contact .contact_container .contact_form textarea {
+  background-color: #212121;
+  border: none;
+  color: #fff;
+  padding: 9px 14px;
+  -webkit-box-shadow: 0 0 10px #000000d9;
+          box-shadow: 0 0 10px #000000d9;
+  border-radius: 5px;
+}
+
+.portfolio .contact .contact_container .contact_form .btnSendMe {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ff651c;
+  border-radius: 5px;
+  background-color: #ff651c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  margin: 25px auto;
+}
+
+.portfolio .contact .contact_container .contact_form .btnSendMe:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 25px #000000d9;
+          box-shadow: 0 0 25px #000000d9;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.portfolio .contact .contact_container .contact_info .info_list {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio .contact .contact_container .contact_info .info_list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 20px;
+}
+
+.portfolio .contact .contact_container .contact_info .info_list li i {
+  color: #ff651c;
+  font-size: 30px;
+  min-width: 30px;
+}
+
+.portfolio .contact .contact_container .contact_info .info_list li .info_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+.portfolio .contact .contact_container .contact_info .info_list li .info_item a {
+  color: #ff651c;
+}
+
 @-webkit-keyframes textMove {
   0% {
     margin-top: 0;
@@ -407,6 +573,36 @@ body span {
   }
   100% {
     margin-top: 0;
+  }
+}
+
+@-webkit-keyframes lineMove {
+  0% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+  }
+  50% {
+    -webkit-transform: translateX(89px);
+            transform: translateX(89px);
+  }
+  100% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+  }
+}
+
+@keyframes lineMove {
+  0% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+  }
+  50% {
+    -webkit-transform: translateX(89px);
+            transform: translateX(89px);
+  }
+  100% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
   }
 }
 /*# sourceMappingURL=style.css.map */
