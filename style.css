@@ -1,7 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -22,13 +22,13 @@ body span {
 }
 
 .portfolio .home .home_info .home_infoNameLine, .portfolio .about .about_infoNameLine, .portfolio .project .project_infoNameLine, .portfolio .contact .contact_infoNameLine {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   left: 0;
   margin: 10px auto;
   position: relative;
-  z-index: 999;
+  z-index: 9;
   right: 0;
   width: 100px;
   border-radius: 4px;
@@ -37,7 +37,7 @@ body span {
 
 .portfolio .home .home_info .home_infoNameLine::before, .portfolio .about .about_infoNameLine::before, .portfolio .project .project_infoNameLine::before, .portfolio .contact .contact_infoNameLine::before {
   background-color: #212121;
-  content: '';
+  content: "";
   height: 100%;
   position: absolute;
   top: 0;
@@ -49,7 +49,7 @@ body span {
 
 .portfolio .home .home_info .home_infoNameLine::after, .portfolio .about .about_infoNameLine::after, .portfolio .project .project_infoNameLine::after, .portfolio .contact .contact_infoNameLine::after {
   background-color: #212121;
-  content: '';
+  content: "";
   height: 100%;
   position: absolute;
   top: 0;
@@ -191,7 +191,7 @@ body span {
 }
 
 .portfolio .menu .list_item .menu_item.active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: -37.5%;
@@ -204,7 +204,7 @@ body span {
 }
 
 .portfolio .menu .list_item .menu_item.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -37.5%;
   right: 9px;
@@ -458,6 +458,160 @@ body span {
           transform: rotate(10deg);
 }
 
+.portfolio .project .tab-content .listCertificate {
+  /* Modal Content (image) */
+  /* Caption of Modal Image */
+  /* Add Animation */
+  /* The Close Button */
+}
+
+.portfolio .project .tab-content .listCertificate .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.portfolio .project .tab-content .listCertificate .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.portfolio .project .tab-content .listCertificate #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.portfolio .project .tab-content .listCertificate .modal-content,
+.portfolio .project .tab-content .listCertificate #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.portfolio .project .tab-content .listCertificate .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio .project .tab-content .listCertificate .close:hover,
+.portfolio .project .tab-content .listCertificate .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item {
+  max-height: 377px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item img {
+  width: 100%;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item:hover .certificate_overlay {
+  opacity: 1;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item .certificate_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0000009d;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item .certificate_overlay .btn_eye {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.719);
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item .certificate_overlay .btn_eye i {
+  font-size: 30px;
+}
+
+.portfolio .project .tab-content .listCertificate .certification_item .certificate_overlay .btn_eye:hover {
+  background-color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .portfolio .contact {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -603,6 +757,12 @@ body span {
   100% {
     -webkit-transform: translateX(-1px);
             transform: translateX(-1px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

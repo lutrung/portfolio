@@ -19,6 +19,7 @@
 <body>
     <div class="portfolio ">
         <div class="line"></div>
+        <!-- SIDEBAR -->
         <div class="menu">
             <ul class="list_item">
                 <li title="Home" class="menu_item "><i class="fa-solid fa-house-user"></i></li>
@@ -125,13 +126,38 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="listCertificate row">
-                        <div class="certification_item col-4">
-                            <img src="./Assets/Certificate1.png" style="width: 100%;" alt="">
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
                         </div>
-                        <div class="certification_item col-4"><img src="./Assets/Certificate2.png" style="width: 100%;"
-                                alt=""></div>
-                        <div class="certification_item col-4"><img src="./Assets/Certificate1.png" style="width: 100%;"
-                                alt=""></div>
+                        <div class="certification_item col-4">
+                            <img class="certificate_img" src="./Assets/Certificate1.png"
+                                alt="F8 Certificate Javascipt ">
+                            <div class="certificate_overlay">
+                                <div class="btn_eye">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certification_item col-4">
+                            <img class="certificate_img" src="./Assets/Certificate3.jpg"
+                                alt="Cybersoft Certificate Front-End Developer ">
+                            <div class="certificate_overlay">
+                                <div class="btn_eye">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certification_item col-4">
+                            <img class="certificate_img" src="./Assets/Certificate2.png" alt="F8 Certificate React">
+                            <div class="certificate_overlay">
+                                <div class="btn_eye">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -155,7 +181,6 @@
                 </div>
             </div>
         </div>
-
         <!-- CONTACT -->
         <div class="portfolio_item  contact wow bounceInLeft" data-wow-duration="2s">
             <p>Feel Free To Contact Me Anytimes</p>
