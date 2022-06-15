@@ -116,6 +116,9 @@ body {
 
     .modal {
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         z-index: 999;
         padding-top: 50px;
@@ -130,7 +133,7 @@ body {
 
     /* Modal Content (image) */
     .modal-content {
-        margin: auto;
+        margin: 0 auto;
         display: block;
         width: 80%;
         max-width: 700px;
@@ -138,7 +141,7 @@ body {
 
     /* Caption of Modal Image */
     #caption {
-        margin: auto;
+        margin: 0 auto;
         display: block;
         width: 80%;
         max-width: 700px;

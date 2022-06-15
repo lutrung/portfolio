@@ -85,7 +85,7 @@ let certificate_img = document.querySelectorAll('.certificate_img')
 let btn_eye = document.querySelectorAll('.btn_eye')
 btn_eye.forEach((item, index) => {
     item.addEventListener("click", () => {
-        modal.style.display = "block";
+        modal.style.display = "flex";
         modalImg.src = certificate_img[index].src;
         captionText.innerHTML = certificate_img[index].alt;
     })
