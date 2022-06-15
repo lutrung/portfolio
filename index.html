@@ -20,7 +20,7 @@
     <div class="portfolio ">
         <div class="line"></div>
         <!--MENU SIDEBAR -->
-        <div class="menu">
+        <div class="menuPC">
             <ul class="list_item">
                 <li title="Home" class="menu_item active"><i class="fa-solid fa-house-user"></i></li>
                 <li title="About" class="menu_item"><i class="fa-solid fa-user-large"></i></li>
@@ -28,12 +28,20 @@
                 <li title="Contact" class="menu_item"><i class="fa-solid fa-phone"></i></li>
             </ul>
         </div>
+        <div class="menuMB">
+            <ul class="list_item">
+                <li title="Home" class="menu_itemMB active"><i class="fa-solid fa-house-user"></i></li>
+                <li title="About" class="menu_itemMB"><i class="fa-solid fa-user-large"></i></li>
+                <li title="Projects" class="menu_itemMB "><i class="fa-solid fa-briefcase"></i></li>
+                <li title="Contact" class="menu_itemMB"><i class="fa-solid fa-phone"></i></li>
+            </ul>
+        </div>
         <!-- HOME -->
         <div class="portfolio_item active  wow bounceInDown  home row " data-wow-duration="2s">
-            <div class="home_avatar wow slideInLeft col-5" data-wow-delay="0.5s"> </div>
-            <div class=" home_info wow slideInRight col-7" data-wow-delay="0.5s">
+            <div class="home_avatar wow slideInLeft col-0 col-md-5" data-wow-delay="0.5s"> </div>
+            <div class=" home_info wow slideInRight col-12 col-md-7" data-wow-delay="0.5s">
                 <p>Get To Know Me</p>
-                <h1 class="home_infoName">Lu Trung</h1>
+                <h1 class="home_infoName">Lư Trung</h1>
                 <div class="home_infoNameLine"></div>
                 <div class="home_infoPosition">
                     <h3>FrontEnd Developer</h3>
@@ -46,7 +54,7 @@
                             class="fa-brands fa-linkedin"></i></a>
                     <a href=""><i class="fa-brands fa-instagram-square"></i></a>
                 </div>
-                <p>My name is Lu Nguyen Thanh Trung. I’m 25 years old. I started
+                <p>My name is Lư Nguyễn Thành Trung. I’m 25 years old. I started
                     learning and exploring Web applications in mid-2020 and have
                     graduated a Front-End course from Cybersoft Academy. I'm a sociable
                     person and hard-working person. </p>
@@ -62,10 +70,11 @@
             <h1 class="about_title">About <span>Me</span></h1>
             <div class="about_infoNameLine"></div>
             <div class="about_container row">
-                <div class="about_containerLeft col-4 wow slideInLeft" data-wow-delay="0.7s"></div>
-                <div class="about_containerRight col-8 wow slideInRight" data-wow-delay="0.7s">
+                <div class="about_containerLeft col-0 col-md-6 col-lg-4 wow slideInLeft" data-wow-delay="0.7s"></div>
+                <div class="about_containerRight col-0 col-md-6 col-lg-8 wow slideInRight" data-wow-delay="0.7s">
                     <h5>Who Am <span>I ?</span></h5>
-                    <h3>I'm Lu Nguyen Thanh Trung, A <span>Front-End Developer</span> And <span>Web Developer</span>
+                    <h3 id="typing">I'm Lu Nguyen Thanh Trung, A <span>Front-End Developer</span> And <span>Web
+                            Developer</span>
                     </h3>
                     <p>I’m 25 years old. I started learning and exploring Web applications in mid-2020 and have
                         graduated a Front-End course from Cybersoft Academy. I'm a sociable person and hard-working
@@ -73,7 +82,7 @@
                     <div class="about_info">
                         <h3>Personal <span>Informations</span></h3>
                         <div class="about_infoList row">
-                            <div class="about_infoListLeft col-6">
+                            <div class="about_infoListLeft  col-6 col-md-12 col-lg-6">
                                 <ul>
                                     <li>First Name: <p> &nbsp;Trung</p>
                                     </li>
@@ -86,7 +95,7 @@
                                 </ul>
                             </div>
 
-                            <div class="about_infoListRight col-6">
+                            <div class="about_infoListRight col-6 col-md-12 col-lg-6">
                                 <ul>
                                     <li>E-Mail : <a href="mailto:lutrung@gmail.com"> &nbsp;lutrung1297@gmail.com</a>
                                     </li>
@@ -110,13 +119,17 @@
         </div>
         <!-- PROJECT -->
         <div class="portfolio_item   wow bounceInRight project" data-wow-duration="2s">
-            <p>Showcasing Some Of My Project And Certificate</p>
+            <p>Showcasing Some Of My Skill, Certificate And Project</p>
             <h1 class="project_title">My <span>Portfolio</span></h1>
             <div class="project_infoNameLine"></div>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true">Certificate</a>
+                    <a class="nav-link active" id="skill-tab" data-toggle="tab" href="#skill" role="tab"
+                        aria-controls="skill" aria-selected="true">Skill</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                        aria-selected="true">Certificate</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
@@ -124,7 +137,32 @@
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade  show active" id="skill" role="tabpanel" aria-labelledby="skill-tab">
+                    <div class="listSkill ">
+                        <div class="skill_item wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+                            <img class="skill_logo" src="./Assets/html.png" alt="">
+                            <p class="skill_name">HTML</p>
+                        </div>
+                        <div class="skill_item wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.3s">
+                            <img class="skill_logo" src="./Assets/css3.png" alt="">
+                            <p class="skill_name">CSS</p>
+                        </div>
+                        <div class="skill_item wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.6s">
+                            <img class="skill_logo" src="./Assets/sass.png" alt="">
+                            <p class="skill_name">SASS</p>
+                        </div>
+                        <div class="skill_item wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.9s">
+                            <img class="skill_logo" src="./Assets/js.png" alt="">
+                            <p class="skill_name">JAVASCRIPT</p>
+                        </div>
+                        <div class="skill_item wow bounceInUp" data-wow-duration="2s" data-wow-delay="2.2s">
+                            <img class="skill_logo" src="./Assets/react.png" alt="">
+                            <p class="skill_name">REACT JS</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="listCertificate row">
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
@@ -132,8 +170,7 @@
                             <img class="modal-content" id="img01">
                             <div id="caption"></div>
                         </div>
-                        <div class="certification_item col-4 wow bounceInRight" data-wow-duration="2s"
-                            data-wow-delay="1s">
+                        <div class="certification_item col-12 col-lg-4  wow bounceInRight" data-wow-duration="2s">
                             <img class="certificate_img" src="./Assets/Certificate1.png"
                                 alt="F8 Certificate Javascipt ">
                             <div class="certificate_overlay">
@@ -142,8 +179,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="certification_item col-4 wow bounceInRight" data-wow-duration="2s"
-                            data-wow-delay="1.3s">
+                        <div class="certification_item col-12 col-lg-4  wow bounceInRight" data-wow-duration="2s"
+                            data-wow-delay="0.3s">
                             <img class="certificate_img" src="./Assets/Certificate3.jpg"
                                 alt="Cybersoft Certificate Front-End Developer ">
                             <div class="certificate_overlay">
@@ -152,8 +189,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="certification_item col-4 wow bounceInRight" data-wow-duration="2s"
-                            data-wow-delay="1.6s">
+                        <div class="certification_item col-12 col-lg-4  wow bounceInRight" data-wow-duration="2s"
+                            data-wow-delay="0.6s">
                             <img class="certificate_img" src="./Assets/Certificate2.png" alt="F8 Certificate React">
                             <div class="certificate_overlay">
                                 <div class="btn_eye">
@@ -165,7 +202,7 @@
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="listProject row">
-                        <div class="project_item col-4 wow bounceInRight" data-wow-duration="2s">
+                        <div class="project_item col-12 col-lg-6  col-xl-4 wow bounceInRight" data-wow-duration="2s">
                             <img src="./Assets/project1.png" style="width: 100%;" alt="">
                             <div class="overlay">
                                 <h4 class="overlay_name">WEBSITE BOOKING FILM TICKET</h4>
@@ -194,7 +231,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="project_item col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay=".3s">
+                        <div class="project_item col-12 col-lg-6 col-xl-4  wow bounceInRight" data-wow-duration="2s"
+                            data-wow-delay=".3s">
                             <img src="./Assets/project2.png" style="width: 100%;" alt="">
                             <div class="overlay">
                                 <h4 class="overlay_name">WEBSITE E-LEARNING</h4>
@@ -219,7 +257,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="project_item col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay=".6s">
+                        <div class="project_item col-12 col-lg-6 col-xl-4  wow bounceInRight" data-wow-duration="2s"
+                            data-wow-delay=".6s">
                             <img src="./Assets/project4.png" style="width: 100%;" alt="">
                             <div class="overlay">
                                 <h4 class="overlay_name">WEBITE MUSIC</h4>
@@ -243,7 +282,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="project_item col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay=".9s">
+                        <div class="project_item col-12 col-lg-6  col-xl-4 wow bounceInRight" data-wow-duration="2s"
+                            data-wow-delay=".9s">
                             <img src="./Assets/project3.png" style="width: 100%;" alt="">
                             <div class="overlay">
                                 <h4 class="overlay_name">TODO APP</h4>
@@ -279,25 +319,25 @@
             <h1 class="contact_title">My <span>Contact</span></h1>
             <div class="contact_infoNameLine"></div>
             <div class="contact_container row">
-                <div class="contact_form col-7 wow slideInLeft" data-wow-delay="0.5s">
+                <div class="contact_form col-12 col-lg-7 wow slideInLeft" data-wow-delay="0.5s">
                     <h4>Contact Me</h4>
-                    <form>
+                    <form method="post">
                         <div class="row">
                             <div class="col-6"> <input type="text" class="form-control " id="name" placeholder="Name">
                             </div>
                             <div class="col-6"> <input type="email" class="form-control" id="email" placeholder="Email">
                             </div>
                             <div class="col-12 mt-4 mb-4">
-                                <input type="text" class="form-control " id="Subject" placeholder="Subject">
+                                <input type="text" class="form-control " id="subject" placeholder="Subject">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" id="Message" rows="4" placeholder="Message"></textarea>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
                             </div>
-                            <button type="submit" class="btnSendMe">Send Message</button>
+                            <button id="btnSendMe" class="btnSendMe">Send Message</button>
                         </div>
                     </form>
                 </div>
-                <div class="contact_info col-5 wow slideInRight" data-wow-delay="0.5s">
+                <div class="contact_info col-12 col-lg-5 wow slideInRight" data-wow-delay="0.5s">
                     <h4>Contact Info</h4>
                     <p>Always available for freelance work if the right project comes along, Feel free to
                         contact
@@ -326,6 +366,9 @@
 
             </div>
         </div>
+        <!-- MAIL -->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
         <script src="./index.js"></script>
         <!-- bootstrap 4.3-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
