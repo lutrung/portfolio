@@ -66,6 +66,7 @@ body span {
   word-spacing: 5px;
   color: #fff;
   margin: 10px 0 0;
+  text-align: center;
 }
 
 .portfolio .home, .portfolio .about, .portfolio .project, .portfolio .contact {
@@ -106,6 +107,10 @@ body span {
   padding: 100px 150px 100px 70px;
   height: 100vh;
   position: relative;
+  /* Modal Content (image) */
+  /* Caption of Modal Image */
+  /* Add Animation */
+  /* The Close Button */
 }
 
 .portfolio .line {
@@ -119,6 +124,83 @@ body span {
   -webkit-box-shadow: 0 0 7px #fffffff2;
           box-shadow: 0 0 7px #fffffff2;
   background-color: #ff651c;
+}
+
+.portfolio .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.portfolio .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.portfolio #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.portfolio .modal-content,
+.portfolio #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.portfolio .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio .close:hover,
+.portfolio .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .portfolio .menuPC {
@@ -261,7 +343,7 @@ body span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   text-align: center;
 }
 
@@ -538,87 +620,6 @@ body span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* Modal Content (image) */
-  /* Caption of Modal Image */
-  /* Add Animation */
-  /* The Close Button */
-}
-
-.portfolio .project .tab-content .listCertificate .modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.portfolio .project .tab-content .listCertificate .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.portfolio .project .tab-content .listCertificate #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-}
-
-.portfolio .project .tab-content .listCertificate .modal-content,
-.portfolio .project .tab-content .listCertificate #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-.portfolio .project .tab-content .listCertificate .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.portfolio .project .tab-content .listCertificate .close:hover,
-.portfolio .project .tab-content .listCertificate .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .portfolio .project .tab-content .listCertificate .certification_item {
@@ -1034,6 +1035,9 @@ body span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .portfolio .about .about_container .about_containerRight {
+    padding: 0;
   }
   .portfolio .about .about_container .about_containerLeft {
     display: none;
