@@ -48,6 +48,15 @@ let toHire = () => {
         menu[3].click()
     })
 }
+let checkEmpty = (fieldName, value) => {
+    let check = true;
+    if (value == null || value == "" || value == " ") {
+        alert(fieldName + ' không được bỏ trống !');
+        check = false
+    }
+    return check
+
+}
 let sendMail = () => {
     let btnSend = document.getElementById('btnSendMe')
     btnSend.addEventListener('click', (e) => {
@@ -56,17 +65,29 @@ let sendMail = () => {
         let email = document.getElementById('email').value;
         let subject = document.getElementById('subject').value;
         let message = document.getElementById('message').value;
-        let body = 'Name: ' + " " + name + '<br/> Email:' + email + " " + '<br/> Subject:' + " " + subject + '<br/> Message:' + " " + message;
+        let body = '[Name]: ' + " " + name + '<br/> [Email]:' + " " + email + '<br/> [Subject]:' + " " + subject + '<br/> [Message]:' + " " + message;
 
-        Email.send({
-            SecureToken: "00ec2a6d-34cd-45d7-be7b-5f16ec3ca145",
-            To: 'lutrung1297@gmail.com',
-            From: 'lutrung1297@gmail.com',
-            Subject: subject,
-            Body: body
-        }).then(
-            message => alert(message)
-        );
+        if (!checkEmpty('Tên', name)) {
+            return false
+        } else if (!checkEmpty('Email', email)) {
+            return false
+        } else if (!checkEmpty('Subject', subject)) {
+            return false
+        } else if (!checkEmpty('Message', message)) {
+            return false
+        } else {
+            Email.send({
+                SecureToken: "00ec2a6d-34cd-45d7-be7b-5f16ec3ca145",
+                To: 'lutrung1297@gmail.com',
+                From: 'lutrung1297@gmail.com',
+                Subject: subject,
+                Body: body
+            }).then(
+                message => alert('Gửi mail thành công ^^!')
+            );
+        }
+
+
     })
 
 }
