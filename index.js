@@ -56,12 +56,12 @@ let sendMail = () => {
         let email = document.getElementById('email').value;
         let subject = document.getElementById('subject').value;
         let message = document.getElementById('message').value;
-        let body = 'Name: ' + name + '<br/> Email:' + email + '<br/> Subject:' + subject + '<br/> Message:' + message;
+        let body = 'Name: ' + " " + name + '<br/> Email:' + email + " " + '<br/> Subject:' + " " + subject + '<br/> Message:' + " " + message;
 
         Email.send({
             SecureToken: "00ec2a6d-34cd-45d7-be7b-5f16ec3ca145",
             To: 'lutrung1297@gmail.com',
-            From: email,
+            From: 'lutrung1297@gmail.com',
             Subject: subject,
             Body: body
         }).then(
