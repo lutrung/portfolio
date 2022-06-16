@@ -514,6 +514,8 @@ body span {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
+  -webkit-animation: shake 1.2s infinite;
+          animation: shake 1.2s infinite;
 }
 
 .portfolio .about .about_container .about_containerRight .about_info .downloadCV a {
@@ -525,6 +527,8 @@ body span {
 }
 
 .portfolio .about .about_container .about_containerRight .about_info .downloadCV:hover {
+  -webkit-animation: none;
+          animation: none;
   background-color: transparent;
   -webkit-box-shadow: 0 0 25px #000000d9;
           box-shadow: 0 0 25px #000000d9;
@@ -977,6 +981,44 @@ body span {
 
 .portfolio .contact .contact_container .contact_info .info_list li .info_item a {
   color: #ff651c;
+}
+
+@-webkit-keyframes shake {
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  30% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes shake {
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  30% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
 }
 
 @-webkit-keyframes textMove {
