@@ -77,9 +77,9 @@ let sendMail = () => {
             return false
         } else {
             Email.send({
-                SecureToken: "00ec2a6d-34cd-45d7-be7b-5f16ec3ca145",
-                To: 'lutrung1297@gmail.com',
-                From: 'lutrung1297@gmail.com',
+                SecureToken: "f4c45e06-3db9-4783-b5d9-2e1bf753d05d",
+                To: 'info.lutrung@gmail.com',
+                From: 'info.lutrung@gmail.com',
                 Subject: subject,
                 Body: body
             }).then(
