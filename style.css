@@ -99,6 +99,24 @@ body span {
   /* Add Animation */
   /* The Close Button */
 }
+.portfolio .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.831372549);
+  transition: all 0.5s;
+  display: none;
+  z-index: 999;
+}
+.portfolio .popup video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
 .portfolio .line {
   position: fixed;
   height: 155%;
@@ -610,7 +628,8 @@ body span {
   justify-content: space-around;
   width: 100%;
 }
-.portfolio .project .tab-content .listProject .project_item .overlay .project_btn a {
+.portfolio .project .tab-content .listProject .project_item .overlay .project_btn a, .portfolio .project .tab-content .listProject .project_item .overlay .project_btn .btn_video {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -622,7 +641,7 @@ body span {
   background-color: rgba(0, 0, 0, 0.3647058824);
   transition: all 0.5s;
 }
-.portfolio .project .tab-content .listProject .project_item .overlay .project_btn a:hover {
+.portfolio .project .tab-content .listProject .project_item .overlay .project_btn a:hover, .portfolio .project .tab-content .listProject .project_item .overlay .project_btn .btn_video:hover {
   background-color: #ff651c;
 }
 .portfolio .project .tab-content .listProject .project_item:hover {
@@ -747,6 +766,9 @@ body span {
 @media only screen and (max-width: 768px) {
   .portfolio {
     padding: 50px 50px 85px;
+  }
+  .portfolio .popup video {
+    width: 100%;
   }
   .portfolio .menuPC {
     display: none !important;

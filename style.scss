@@ -102,7 +102,24 @@ body {
   padding: 100px 150px 100px 70px;
   height: 100vh;
   position: relative;
-
+  .popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000d4;
+    transition: all 0.5s;
+    display: none;
+    z-index: 999;
+    video{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 50%;
+    }
+  }
   .line {
     position: fixed;
     height: 155%;
@@ -742,7 +759,8 @@ body {
               justify-content: space-around;
               width: 100%;
 
-              a {
+              a,.btn_video {
+              cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -927,7 +945,11 @@ body {
 @media only screen and (max-width: 768px) {
   .portfolio {
     padding: 50px 50px 85px;
-
+    .popup{
+      video{
+        width: 100%;
+      }
+    }
     .menuPC {
       display: none !important;
     }

@@ -1,4 +1,18 @@
+let videoDemo = document.getElementById('btn_video')
+let popupVideo = document.getElementById('popup')
+let videoSrc = document.getElementById('videoSrc')
+videoDemo.addEventListener('click',()=>{
+    popupVideo.style.display = 'block'
+    // videoSrc.play()
+})
 
+popupVideo.addEventListener('click',(e)=>{
+    console.log('123');
+    if(e.target.classList.contains('popup') ){
+        popupVideo.style.display = 'none'
+        // videoSrc.pause()
+    }
+})
 let sidebar = () => {
     let menu = document.querySelectorAll('.menu_item')
     let menuMB = document.querySelectorAll('.menu_itemMB')
